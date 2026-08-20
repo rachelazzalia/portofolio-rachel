@@ -1,0 +1,223 @@
+:root {
+    --bg-cream-light: #FDFBF7;
+    --bg-cream-card: #FFFDF9;
+    --bg-cream-accent: #F5EBE0;
+
+    --brand-brown: #8B5E3C;
+    --brand-brown-dark: #6E472C;
+    --brand-brown-light: #B08968;
+
+    --text-chocolate: #3D2314;
+    --text-brown-mid: #6F4E37;
+}
+
+/* ==============================
+   GLOBAL
+============================== */
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-cream-light);
+    color: var(--text-chocolate);
+}
+
+.text-chocolate {
+    color: var(--text-chocolate);
+}
+
+.text-brown {
+    color: var(--brand-brown);
+}
+
+.bg-brown {
+    background-color: var(--brand-brown);
+}
+
+.bg-cream-card {
+    background-color: var(--bg-cream-card);
+}
+
+.bg-cream-accent {
+    background-color: var(--bg-cream-accent);
+}
+
+/* ==============================
+   HEADER POLKADOT
+============================== */
+
+.polkadot-header {
+    background-color: #F5EBE0;
+
+    background-image:
+        radial-gradient(
+            #8B5E3C 16%,
+            transparent 17%
+        );
+
+    background-size: 18px 18px;
+}
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+.nav-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--brand-brown-dark);
+}
+
+.nav-link.active-tab {
+    background-color: var(--brand-brown);
+    color: white;
+    box-shadow: 0 4px 10px rgba(139, 94, 60, 0.20);
+}
+
+/* ==============================
+   PAGE
+============================== */
+
+.page-view {
+    animation: fadeIn 0.35s ease-in-out;
+}
+
+.page-view.active {
+    display: block;
+}
+
+/* ==============================
+   CARD
+============================== */
+
+.bg-cream-card {
+    background-color: #FFFDF9;
+}
+
+.bg-cream-card:hover {
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* ==============================
+   BUTTON
+============================== */
+
+button,
+a {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* ==============================
+   FORM
+============================== */
+
+input,
+textarea,
+select {
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--brand-brown);
+    box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.12);
+}
+
+/* ==============================
+   SCROLLBAR
+============================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5EBE0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B08968;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8B5E3C;
+}
+
+/* ==============================
+   ANIMATION
+============================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   MOBILE MENU
+============================== */
+
+#mobile-menu {
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+/* ==============================
+   SELECTION
+============================== */
+
+::selection {
+    background-color: #8B5E3C;
+    color: white;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+
+    .polkadot-header {
+        background-size: 16px 16px;
+    }
+
+    h1 {
+        line-height: 1.2;
+    }
+
+    .page-view {
+        width: 100%;
+    }
+}

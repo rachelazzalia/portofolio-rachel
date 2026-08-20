@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tentang Saya - Rachel | Portofolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-[#8B5E3C] selection:text-white">
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="polkadot-header sticky top-0 z-50 shadow-md">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+
+            <!-- LOGO -->
+            <a href="../index.html"
+               class="flex items-center space-x-3 cursor-pointer">
+
+                <div class="w-10 h-10 rounded-xl bg-[#8B5E3C] text-white flex items-center justify-center font-bold text-xl shadow-lg transform hover:scale-105 transition">
+                    R
+                </div>
+
+                <div>
+                    <span class="text-xl font-extrabold text-[#3D2314] tracking-tight block leading-none">
+                        Rachel.Dev
+                    </span>
+
+                    <span class="text-xs text-[#8B5E3C] font-semibold tracking-widest uppercase">
+                        Portofolio XII RPL
+                    </span>
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGASI DESKTOP -->
+
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-[#F5EBE0]/90 backdrop-blur-md p-1.5 rounded-2xl border border-[#8B5E3C]/20 shadow-inner">
+
+                <a href="../index.html"
+                   class="nav-link px-3 py-2 rounded-xl text-xs lg:text-sm font-medium text-[#3D2314] hover:bg-[#8B5E3C]/10 transition">
+
+                    <i class="fa-solid fa-house mr-1.5"></i>
+                    Beranda
+
+                </a>
+
+
+                <a href="tentang.html"
+                   class="nav-link active-tab px-3 py-2 rounded-xl text-xs lg:text-sm font-medium">
+
+                    <i class="fa-solid fa-user mr-1.5"></i>
+                    Tentang
+
+                </a>
+
+
+                <a href="jaringan.html"
+                   class="nav-link px-3 py-2 rounded-xl text-xs lg:text-sm font-medium text-[#3D2314] hover:bg-[#8B5E3C]/10 transition">
+
+                    <i class="fa-solid fa-network-wired mr-1.5"></i>
+                    Jaringan
+
+                </a>
+
+
+                <a href="iot-arduino.html"
+                   class="nav-link px-3 py-2 rounded-xl text-xs lg:text-sm font-medium text-[#3D2314] hover:bg-[#8B5E3C]/10 transition">
+
+                    <i class="fa-solid fa-microchip mr-1.5"></i>
+                    IoT & Arduino
+
+                </a>
+
+
+                <a href="karya-proyek.html"
+                   class="nav-link px-3 py-2 rounded-xl text-xs lg:text-sm font-medium text-[#3D2314] hover:bg-[#8B5E3C]/10 transition">
+
+                    <i class="fa-solid fa-laptop-code mr-1.5"></i>
+                    Galeri Karya
+
+                </a>
+
+
+                <a href="kontak.html"
+                   class="nav-link px-3 py-2 rounded-xl text-xs lg:text-sm font-medium text-[#3D2314] hover:bg-[#8B5E3C]/10 transition">
+
+                    <i class="fa-solid fa-envelope mr-1.5"></i>
+                    Kontak
+
+                </a>
+
+            </nav>
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button id="mobile-menu-btn"
+                    onclick="toggleMobileMenu()"
+                    class="md:hidden p-2 rounded-lg bg-[#8B5E3C] text-white hover:bg-[#6E472C] transition">
+
+                <i class="fa-solid fa-bars text-xl"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div id="mobile-menu"
+             class="hidden md:hidden bg-[#F5EBE0] border-t border-[#8B5E3C]/20 px-4 pt-2 pb-4 space-y-2">
+
+            <a href="../index.html"
+               class="block w-full text-left px-4 py-2.5 rounded-xl font-medium text-[#3D2314] hover:bg-[#8B5E3C] hover:text-white transition">
+
+                🏠 Beranda
+
+            </a>
+
+
+            <a href="tentang.html"
+               class="block w-full text-left px-4 py-2.5 rounded-xl font-medium bg-[#8B5E3C] text-white">
+
+                👤 Tentang Saya
+
+            </a>
+
+
+            <a href="jaringan.html"
+               class="block w-full text-left px-4 py-2.5 rounded-xl font-medium text-[#3D2314] hover:bg-[#8B5E3C] hover:text-white transition">
+
+                🌐 Jaringan Komputer
+
+            </a>
+
+
+            <a href="iot-arduino.html"
+               class="block w-full text-left px-4 py-2.5 rounded-xl font-medium text-[#3D2314] hover:bg-[#8B5E3C] hover:text-white transition">
+
+                🤖 IoT & Arduino
+
+            </a>
+
+
+            <a href="karya-proyek.html"
+               class="block w-full text-left px-4 py-2.5 rounded-xl font-medium text-[#3D2314] hover:bg-[#8B5E3C] hover:text-white transition">
+
+                💡 Galeri Proyek
+
+            </a>
+
+
+            <a href="kontak.html"
+               class="block w-full text-left px-4 py-2.5 rounded-xl font-medium text-[#3D2314] hover:bg-[#8B5E3C] hover:text-white transition">
+
+                📬 Kontak
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+
+        <section id="view-tentang"
+                 class="page-view active space-y-8">
+
+
+            <!-- JUDUL -->
+
+            <div class="space-y-3">
+
+                <div class="flex items-center space-x-3">
+
+                    <div class="w-3 h-8 bg-brown rounded-full"></div>
+
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-chocolate">
+                        Tentang Saya
+                    </h1>
+
+                </div>
+
+                <p class="text-sm text-[#3D2314]/70 max-w-3xl">
+                    Mengenal lebih dekat profil, pendidikan, minat,
+                    pengalaman belajar, dan aktivitas saya di bidang
+                    informatika.
+                </p>
+
+            </div>
+
+
+            <!-- PROFIL -->
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+
+                <!-- FOTO PROFIL -->
+
+                <div class="bg-cream-card rounded-3xl p-8 border border-[#8B5E3C]/20 shadow-sm flex flex-col items-center justify-center text-center">
+
+                    <div class="relative group mb-5">
+
+                        <div class="absolute -inset-1 bg-gradient-to-r from-[#8B5E3C] to-[#EAE0D5] rounded-full blur opacity-75"></div>
+
+                        <img
+                            src="https://placehold.co/220x220/8b5e3c/ffffff?text=Rachel"
+                            alt="Foto Profil Rachel"
+                            class="relative w-52 h-52 rounded-full object-cover border-4 border-white shadow-md"
+                        >
+
+                    </div>
+
+
+                    <h2 class="text-2xl font-bold text-chocolate">
+                        Rachel
+                    </h2>
+
+                    <p class="text-sm text-[#8B5E3C] font-semibold mt-1">
+                        Siswa Informatika / RPL
+                    </p>
+
+                    <div class="mt-4 flex gap-2 flex-wrap justify-center">
+
+                        <span class="px-3 py-1 rounded-full bg-[#EAE0D5] text-[#8B5E3C] text-xs font-semibold">
+                            HTML
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-[#EAE0D5] text-[#8B5E3C] text-xs font-semibold">
+                            CSS
+                        </span>
+
+                        <span class="px-3 py-1 rounded-full bg-[#EAE0D5] text-[#8B5E3C] text-xs font-semibold">
+                            IoT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BIODATA -->
+
+                <div class="lg:col-span-2 bg-cream-card rounded-3xl p-6 md:p-8 border border-[#8B5E3C]/20 shadow-sm">
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <div class="w-10 h-10 rounded-xl bg-[#EAE0D5] text-[#8B5E3C] flex items-center justify-center">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-chocolate">
+                            Biodata
+                        </h2>
+
+                    </div>
+
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+                        <div class="p-4 rounded-2xl bg-[#F5EBE0]/60">
+                            <p class="text-xs text-[#8B5E3C] font-semibold uppercase tracking-wider">
+                                Nama
+                            </p>
+
+                            <p class="font-semibold text-chocolate mt-1">
+                                Rachel
+                            </p>
+                        </div>
+
+
+                        <div class="p-4 rounded-2xl bg-[#F5EBE0]/60">
+                            <p class="text-xs text-[#8B5E3C] font-semibold uppercase tracking-wider">
+                                Sekolah
+                            </p>
+
+                            <p class="font-semibold text-chocolate mt-1">
+                                SMAN 2 Mojokerto
+                            </p>
+                        </div>
+
+
+                        <div class="p-4 rounded-2xl bg-[#F5EBE0]/60">
+                            <p class="text-xs text-[#8B5E3C] font-semibold uppercase tracking-wider">
+                                Kelas
+                            </p>
+
+                            <p class="font-semibold text-chocolate mt-1">
+                                XII
+                            </p>
+                        </div>
+
+
+                        <div class="p-4 rounded-2xl bg-[#F5EBE0]/60">
+                            <p class="text-xs text-[#8B5E3C] font-semibold uppercase tracking-wider">
+                                Konsentrasi Keahlian
+                            </p>
+
+                            <p class="font-semibold text-chocolate mt-1">
+                                Rekayasa Perangkat Lunak / Informatika
+                            </p>
+                        </div>
+
+
+                        <div class="p-4 rounded-2xl bg-[#F5EBE0]/60">
+                            <p class="text-xs text-[#8B5E3C] font-semibold uppercase tracking-wider">
+                                Minat Studi
+                            </p>
+
+                            <p class="font-semibold text-chocolate mt-1">
+                                Teknologi dan Pemrograman
+                            </p>
+                        </div>
+
+
+                        <div class="p-4 rounded-2xl bg-[#F5EBE0]/60">
+                            <p class="text-xs text-[#8B5E3C] font-semibold uppercase tracking-wider">
+                                Hobi
+                            </p>
+
+                            <p class="font-semibold text-chocolate mt-1">
+                                Belajar, membuat proyek, dan eksplorasi teknologi
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PENDIDIKAN & CAPAIAN -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+                <!-- PENDIDIKAN -->
+
+                <div class="bg-cream-card rounded-3xl p-6 md:p-8 border border-[#8B5E3C]/20 shadow-sm">
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <div class="w-10 h-10 rounded-xl bg-[#EAE0D5] text-[#8B5E3C] flex items-center justify-center">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-chocolate">
+                            Riwayat Pendidikan
+                        </h2>
+
+                    </div>
+
+
+                    <div class="space-y-5">
+
+
+                        <div class="relative pl-6 border-l-2 border-[#B08968]">
+
+                            <div class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-[#8B5E3C]"></div>
+
+                            <p class="text-xs font-semibold text-[#8B5E3C]">
+                                SEKARANG
+                            </p>
+
+                            <h3 class="font-bold text-chocolate mt-1">
+                                SMAN 2 Mojokerto
+                            </h3>
+
+                            <p class="text-sm text-[#3D2314]/70 mt-1">
+                                Kelas XII / Peminatan Informatika
+                            </p>
+
+                        </div>
+
+
+                        <div class="relative pl-6 border-l-2 border-[#B08968]">
+
+                            <div class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-[#B08968]"></div>
+
+                            <p class="text-xs font-semibold text-[#8B5E3C]">
+                                PENDIDIKAN SEBELUMNYA
+                            </p>
+
+                            <h3 class="font-bold text-chocolate mt-1">
+                                Pendidikan Menengah
+                            </h3>
+
+                            <p class="text-sm text-[#3D2314]/70 mt-1">
+                                Pengembangan kemampuan akademik dan teknologi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAPAIAN -->
+
+                <div class="bg-cream-card rounded-3xl p-6 md:p-8 border border-[#8B5E3C]/20 shadow-sm">
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <div class="w-10 h-10 rounded-xl bg-[#EAE0D5] text-[#8B5E3C] flex items-center justify-center">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-chocolate">
+                            Capaian
+                        </h2>
+
+                    </div>
+
+
+                    <div class="space-y-4">
+
+
+                        <div class="flex gap-4 items-start">
+
+                            <div class="w-9 h-9 shrink-0 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-chocolate">
+                                    Pengembangan Akademik
+                                </h3>
+
+                                <p class="text-sm text-[#3D2314]/70 mt-1">
+                                    Aktif mengembangkan kemampuan dalam bidang
+                                    teknologi dan informatika.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex gap-4 items-start">
+
+                            <div class="w-9 h-9 shrink-0 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-chocolate">
+                                    Proyek Teknologi
+                                </h3>
+
+                                <p class="text-sm text-[#3D2314]/70 mt-1">
+                                    Mengerjakan berbagai latihan dan proyek
+                                    pemrograman berbasis web serta IoT.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex gap-4 items-start">
+
+                            <div class="w-9 h-9 shrink-0 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-chocolate">
+                                    Problem Solving
+                                </h3>
+
+                                <p class="text-sm text-[#3D2314]/70 mt-1">
+                                    Terbiasa mempelajari logika dan menyelesaikan
+                                    permasalahan melalui pemrograman.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GALERI AKTIVITAS -->
+
+            <div class="space-y-5">
+
+                <div class="flex items-center space-x-3">
+
+                    <div class="w-3 h-8 bg-brown rounded-full"></div>
+
+                    <h2 class="text-2xl font-bold text-chocolate">
+                        Aktivitas Belajar
+                    </h2>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+                    <div class="bg-cream-card rounded-2xl overflow-hidden border border-[#8B5E3C]/15 shadow-sm">
+
+                        <img
+                            src="https://placehold.co/600x400/F5EBE0/8B5E3C?text=Web+Development"
+                            alt="Web Development"
+                            class="w-full h-48 object-cover"
+                        >
+
+                        <div class="p-5">
+
+                            <h3 class="font-bold text-chocolate">
+                                Web Development
+                            </h3>
+
+                            <p class="text-sm text-[#3D2314]/70 mt-2">
+                                Mempelajari HTML, CSS, layout, dan pengembangan
+                                website responsif.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="bg-cream-card rounded-2xl overflow-hidden border border-[#8B5E3C]/15 shadow-sm">
+
+                        <img
+                            src="https://placehold.co/600x400/EAE0D5/8B5E3C?text=Networking"
+                            alt="Networking"
+                            class="w-full h-48 object-cover"
+                        >
+
+                        <div class="p-5">
+
+                            <h3 class="font-bold text-chocolate">
+                                Jaringan Komputer
+                            </h3>
+
+                            <p class="text-sm text-[#3D2314]/70 mt-2">
+                                Praktik IP addressing, subnetting, topologi,
+                                dan analisis jaringan.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="bg-cream-card rounded-2xl overflow-hidden border border-[#8B5E3C]/15 shadow-sm">
+
+                        <img
+                            src="https://placehold.co/600x400/F5EBE0/8B5E3C?text=IoT+Arduino"
+                            alt="IoT Arduino"
+                            class="w-full h-48 object-cover"
+                        >
+
+                        <div class="p-5">
+
+                            <h3 class="font-bold text-chocolate">
+                                IoT & Arduino
+                            </h3>
+
+                            <p class="text-sm text-[#3D2314]/70 mt-2">
+                                Eksplorasi sensor, mikrokontroler, aktuator,
+                                dan proyek Internet of Things.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="bg-[#F5EBE0] border-t-2 border-[#8B5E3C] mt-12 py-8">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+
+            <div>
+
+                <p class="font-bold text-chocolate text-sm">
+                    © 2026 Rachel Amelia - XII RPL / Informatika
+                </p>
+
+                <p class="text-xs text-[#3D2314]/70 mt-0.5">
+                    Website Portofolio Digital Berstandar Industri
+                    (Tema Cream & Cokelat + Polkadot CSS)
+                </p>
+
+            </div>
+
+
+            <div class="flex items-center space-x-4 text-lg text-brown">
+
+                <a href="https://github.com"
+                   target="_blank"
+                   class="hover:text-chocolate transition">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a href="https://linkedin.com"
+                   target="_blank"
+                   class="hover:text-chocolate transition">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+
+                <a href="mailto:rachel@sekolah.sch.id"
+                   class="hover:text-chocolate transition">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>
