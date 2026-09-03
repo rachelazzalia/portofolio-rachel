@@ -1,0 +1,337 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kontak | Website</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+
+    <header class="polkadot-header contact-header">
+
+        <div class="header-content">
+
+            <p class="contact-label">
+                HUBUNGI KAMI
+            </p>
+
+            <h1>
+                Ada yang ingin<br>
+                <span class="text-brown">
+                    ditanyakan?
+                </span>
+            </h1>
+
+            <p>
+                Jangan ragu untuk menghubungi kami.
+                Kami siap membantu dan menjawab pertanyaan kamu.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         CONTACT SECTION
+    ============================== -->
+
+    <main class="contact-section">
+
+        <div class="contact-container">
+
+
+            <!-- ==============================
+                 CONTACT INFORMATION
+            ============================== -->
+
+            <div class="contact-info bg-cream-card">
+
+                <h2>
+                    Hubungi Kami
+                </h2>
+
+                <p class="info-description">
+                    Punya pertanyaan atau ingin mengetahui
+                    informasi lebih lanjut? Hubungi kami
+                    melalui WhatsApp.
+                </p>
+
+
+                <!-- WhatsApp -->
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        ✆
+                    </div>
+
+                    <div>
+
+                        <span>
+                            WhatsApp
+                        </span>
+
+                        <p>
+                            +62 821-3750-0566
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Social -->
+
+                <div class="contact-social">
+
+                    <p>
+                        Chat langsung melalui WhatsApp
+                    </p>
+
+                    <div class="social-links">
+
+                        <a
+                            href="https://wa.me/6282137500566"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp"
+                        >
+                            WA
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 CONTACT FORM
+            ============================== -->
+
+            <div class="contact-form bg-cream-card">
+
+                <h2>
+                    Kirim Pesan
+                </h2>
+
+                <p class="form-description">
+                    Isi data berikut, kemudian klik tombol
+                    untuk mengirim pesan melalui WhatsApp.
+                </p>
+
+
+                <form id="contactForm">
+
+                    <!-- Nama -->
+
+                    <div class="form-group">
+
+                        <label for="nama">
+                            Nama
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nama"
+                            name="nama"
+                            placeholder="Masukkan nama kamu"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Masukkan email kamu"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Subjek -->
+
+                    <div class="form-group">
+
+                        <label for="subjek">
+                            Subjek
+                        </label>
+
+                        <select
+                            id="subjek"
+                            name="subjek"
+                            required
+                        >
+
+                            <option value="">
+                                Pilih subjek
+                            </option>
+
+                            <option value="Pertanyaan">
+                                Pertanyaan
+                            </option>
+
+                            <option value="Kerja Sama">
+                                Kerja Sama
+                            </option>
+
+                            <option value="Saran">
+                                Saran
+                            </option>
+
+                            <option value="Informasi">
+                                Informasi
+                            </option>
+
+                            <option value="Lainnya">
+                                Lainnya
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Pesan -->
+
+                    <div class="form-group">
+
+                        <label for="pesan">
+                            Pesan
+                        </label>
+
+                        <textarea
+                            id="pesan"
+                            name="pesan"
+                            rows="5"
+                            placeholder="Tuliskan pesan kamu..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Button -->
+
+                    <button
+                        type="submit"
+                        class="contact-button"
+                    >
+                        Kirim Pesan →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer class="contact-footer">
+
+        <p>
+            © 2026 Website. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+         Mengirim form ke WhatsApp
+    ============================== -->
+
+    <script>
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const nama =
+                document.getElementById("nama").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const subjek =
+                document.getElementById("subjek").value;
+
+            const pesan =
+                document.getElementById("pesan").value;
+
+
+            const nomorWhatsApp =
+                "6282137500566";
+
+
+            const teks =
+                "Halo, saya ingin menghubungi Anda.%0A%0A" +
+                "*Nama:* " + encodeURIComponent(nama) + "%0A" +
+                "*Email:* " + encodeURIComponent(email) + "%0A" +
+                "*Subjek:* " + encodeURIComponent(subjek) + "%0A" +
+                "*Pesan:* " + encodeURIComponent(pesan);
+
+
+            const url =
+                "https://wa.me/" +
+                nomorWhatsApp +
+                "?text=" +
+                teks;
+
+
+            window.open(
+                url,
+                "_blank"
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+```
