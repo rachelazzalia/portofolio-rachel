@@ -23,23 +23,18 @@
 
 <body>
 
-    <!-- ==============================
-         HEADER
-    ============================== -->
-
-    <header class="polkadot-header contact-header">
+    <!-- HEADER -->
+    <header class="contact-header">
 
         <div class="header-content">
 
-            <p class="contact-label">
+            <span class="contact-label">
                 HUBUNGI KAMI
-            </p>
+            </span>
 
             <h1>
-                Ada yang ingin<br>
-                <span class="text-brown">
-                    ditanyakan?
-                </span>
+                Ada yang ingin
+                <span>ditanyakan?</span>
             </h1>
 
             <p>
@@ -52,20 +47,17 @@
     </header>
 
 
-    <!-- ==============================
-         CONTACT SECTION
-    ============================== -->
-
+    <!-- CONTACT -->
     <main class="contact-section">
 
         <div class="contact-container">
 
+            <!-- CONTACT INFORMATION -->
+            <section class="contact-info">
 
-            <!-- ==============================
-                 CONTACT INFORMATION
-            ============================== -->
-
-            <div class="contact-info bg-cream-card">
+                <div class="section-number">
+                    01
+                </div>
 
                 <h2>
                     Hubungi Kami
@@ -73,80 +65,67 @@
 
                 <p class="info-description">
                     Punya pertanyaan atau ingin mengetahui
-                    informasi lebih lanjut? Hubungi kami
-                    melalui WhatsApp.
+                    informasi lebih lanjut? Kamu dapat
+                    menghubungi kami melalui WhatsApp.
                 </p>
 
-
-                <!-- WhatsApp -->
 
                 <div class="info-item">
 
                     <div class="info-icon">
-                        ✆
+                        ☎
                     </div>
 
-                    <div>
-
-                        <span>
-                            WhatsApp
-                        </span>
-
-                        <p>
-                            +62 821-3750-0566
-                        </p>
-
+                    <div class="info-text">
+                        <span>WhatsApp</span>
+                        <p>+62 821-3750-0566</p>
                     </div>
 
                 </div>
 
-
-                <!-- Social -->
 
                 <div class="contact-social">
 
                     <p>
-                        Chat langsung melalui WhatsApp
+                        Chat langsung bersama kami
                     </p>
 
-                    <div class="social-links">
-
-                        <a
-                            href="https://wa.me/6282137500566"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="WhatsApp"
-                        >
-                            WA
-                        </a>
-
-                    </div>
+                    <a
+                        href="https://wa.me/6282137500566"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="whatsapp-link"
+                    >
+                        <span>WA</span>
+                        WhatsApp
+                        <strong>↗</strong>
+                    </a>
 
                 </div>
 
-            </div>
+            </section>
 
 
-            <!-- ==============================
-                 CONTACT FORM
-            ============================== -->
+            <!-- CONTACT FORM -->
+            <section class="contact-form">
 
-            <div class="contact-form bg-cream-card">
+                <div class="section-number">
+                    02
+                </div>
 
                 <h2>
                     Kirim Pesan
                 </h2>
 
                 <p class="form-description">
-                    Isi data berikut, kemudian klik tombol
-                    untuk mengirim pesan melalui WhatsApp.
+                    Isi formulir berikut. Setelah dikirim,
+                    kamu akan diarahkan ke WhatsApp.
                 </p>
 
 
                 <form id="contactForm">
 
                     <!-- Nama -->
-
                     <div class="form-group">
 
                         <label for="nama">
@@ -165,7 +144,6 @@
 
 
                     <!-- Email -->
-
                     <div class="form-group">
 
                         <label for="email">
@@ -176,7 +154,7 @@
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="Masukkan email kamu"
+                            placeholder="nama@email.com"
                             required
                         >
 
@@ -184,7 +162,6 @@
 
 
                     <!-- Subjek -->
-
                     <div class="form-group">
 
                         <label for="subjek">
@@ -227,7 +204,6 @@
 
 
                     <!-- Pesan -->
-
                     <div class="form-group">
 
                         <label for="pesan">
@@ -246,27 +222,24 @@
 
 
                     <!-- Button -->
-
                     <button
                         type="submit"
                         class="contact-button"
                     >
-                        Kirim Pesan →
+                        <span>Kirim Pesan</span>
+                        <strong>→</strong>
                     </button>
 
                 </form>
 
-            </div>
+            </section>
 
         </div>
 
     </main>
 
 
-    <!-- ==============================
-         FOOTER
-    ============================== -->
-
+    <!-- FOOTER -->
     <footer class="contact-footer">
 
         <p>
@@ -276,11 +249,7 @@
     </footer>
 
 
-    <!-- ==============================
-         JAVASCRIPT
-         Mengirim form ke WhatsApp
-    ============================== -->
-
+    <!-- JAVASCRIPT -->
     <script>
 
         const contactForm =
@@ -308,18 +277,18 @@
 
 
             const teks =
-                "Halo, saya ingin menghubungi Anda.%0A%0A" +
-                "*Nama:* " + encodeURIComponent(nama) + "%0A" +
-                "*Email:* " + encodeURIComponent(email) + "%0A" +
-                "*Subjek:* " + encodeURIComponent(subjek) + "%0A" +
-                "*Pesan:* " + encodeURIComponent(pesan);
+                "Halo, saya ingin menghubungi Anda.\n\n" +
+                "*Nama:* " + nama + "\n" +
+                "*Email:* " + email + "\n" +
+                "*Subjek:* " + subjek + "\n" +
+                "*Pesan:* " + pesan;
 
 
             const url =
                 "https://wa.me/" +
                 nomorWhatsApp +
                 "?text=" +
-                teks;
+                encodeURIComponent(teks);
 
 
             window.open(
